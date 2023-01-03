@@ -55,39 +55,87 @@ main {
             color: rgb(85, 85, 85);
         }
 
-        .btn_dark_pink {
-            background-color: #f68c89;
+    }
+
+    .btn_dark_pink,
+    .buy_now {
+        background-color: #f68c89;
+        color: white;
+        border: 1 px solid transparent;
+        width: fit-content;
+
+
+        &:hover {
+            background-color: #f5d4d3;
+            border: 1px solid white;
             color: white;
-            border: 1 px solid transparent;
+        }
+    }
+
+    .card_actions {
+        .btn-outline {
+            border: 1px solid #f68c89;
+            color: #f68c89;
 
             &:hover {
-                background-color: #f5d4d3;
-                border: 1px solid white;
+                background-color: #f68c89;
+                border: transparent;
                 color: white;
             }
         }
+    }
 
-        .btn_edit {
-            background-color: #f9d083;
+    .card-body {
+        span {
+            color: #f68c89;
+        }
+    }
+
+    .text_pink {
+        color: #f68c89;
+    }
+
+    .back {
+        text-decoration: underline;
+        color: #f68c89;
+        font-weight: bold;
+        font-size: 20px;
+    }
+
+    .btn_edit {
+        background-color: #f9d083;
+        color: white;
+        border: 1 px solid transparent;
+
+        &:hover {
+            background-color: #f5d4d3;
+            border: 1px solid white;
             color: white;
-            border: 1 px solid transparent;
-
-            &:hover {
-                background-color: #f5d4d3;
-                border: 1px solid white;
-                color: white;
-            }
         }
+    }
 
-        .btn-light {
-            border: 1 px solid transparent;
+    .btn-light {
+        border: 1 px solid transparent;
 
-            &:hover {
-                background-color: #f5d4d3;
-                border: 1px solid white;
-                color: white;
-            }
+        &:hover {
+            background-color: #f5d4d3;
+            border: 1px solid white;
+            color: white;
         }
+    }
+
+
+    .avatar {
+        width: 250px;
+        border-radius: 50%;
+    }
+
+    .signature {
+        font-style: oblique;
+    }
+
+    .shop_img {
+        width: 100%;
     }
 }
 
@@ -112,4 +160,5 @@ footer {
             color: #f68c89;
         }
     }
+
 }

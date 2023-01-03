@@ -19,7 +19,12 @@
                                 class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About me</a>
+                        <a class="nav-link {{Route::currentRouteName() === 'shop' ? 'active' : ''}}"
+                            href="{{route('shop')}}">Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {{Route::currentRouteName() === 'about' ? 'active' : ''}}"
+                            href="{{route('about')}}">About me</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"

@@ -15,5 +15,7 @@ use App\Http\Controllers\EarringController;
 */
 
 Route::get('/', [EarringController::class,'index'])->name('index');
+Route::get('/about', [EarringController::class,'about'])->name('about');
+Route::get('/shop', [EarringController::class,'shop'])->name('shop');
 
 Route::resource('earrings', EarringController::class);
