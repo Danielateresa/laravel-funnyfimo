@@ -16,7 +16,9 @@ header {
         text-transform: uppercase;
     }
 
-
+    .active {
+        color: rgb(85, 85, 85);
+    }
 }
 
 main {
@@ -49,7 +51,65 @@ main {
         color: rgb(85, 85, 85);
 
         th {
+            text-transform: uppercase;
             color: rgb(85, 85, 85);
+        }
+
+        .btn_dark_pink {
+            background-color: #f68c89;
+            color: white;
+            border: 1 px solid transparent;
+
+            &:hover {
+                background-color: #f5d4d3;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+
+        .btn_edit {
+            background-color: #f9d083;
+            color: white;
+            border: 1 px solid transparent;
+
+            &:hover {
+                background-color: #f5d4d3;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+
+        .btn-light {
+            border: 1 px solid transparent;
+
+            &:hover {
+                background-color: #f5d4d3;
+                border: 1px solid white;
+                color: white;
+            }
+        }
+    }
+}
+
+footer {
+    .container {
+        width: 1000px;
+    }
+
+    img {
+        width: 200px;
+        border: 2px solid #f5d4d3;
+        border-radius: 50%;
+    }
+
+    .bottom_footer {
+        border-top: 2px solid #f5d4d3;
+
+    }
+
+    a {
+        &:hover {
+            color: #f68c89;
         }
     }
 }

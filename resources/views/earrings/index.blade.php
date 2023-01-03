@@ -1,8 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <h2>Earrings database</h2>
+<div class="container py-5">
+    <h1 class="text-center">Earrings database</h1>
 
     @if(session('message'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -12,8 +12,9 @@
     </div>
     @endif
 
-
-    <a class="btn btn_pink my-3" href=" {{route('earrings.create')}}">Add earring</a>
+    <div class="d-flex justify-content-end pe-4">
+        <a class="btn btn_pink my-3" href=" {{route('earrings.create')}}">Add earring</a>
+    </div>
     <div class="table-responsive">
         <table class="table border-white">
             <thead>
@@ -34,14 +35,12 @@
                     <td>{{$earring->price}} €</td>
                     <td>{{$earring->description}}</td>
                     <td><img class="table_img" src="{{$earring->img}}" alt="{{$earring->name}}"></td>
-                    <td><a class="btn btn-outline-light w-75 ms-3"
-                            href="{{route('earrings.show', $earring->id)}}">Show</a>
-                        <a class="btn btn-outline-light  w-75 ms-3 my-2"
-                            href="{{route('earrings.edit', $earring->id)}}">Edit</a>
+                    <td><a class="btn btn-light w-75 ms-3" href="{{route('earrings.show', $earring->id)}}">Show</a>
+                        <a class="btn btn_edit  w-75 ms-3 my-2" href="{{route('earrings.edit', $earring->id)}}">Edit</a>
                         <form action="{{route('earrings.destroy', $earring->id)}}" method="post">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-outline-light  w-75 ms-3" type="submit">Delete</button>
+                            <button class="btn btn_dark_pink  w-75 ms-3" type="submit">Delete</button>
                         </form>
                     </td>
                 </tr>

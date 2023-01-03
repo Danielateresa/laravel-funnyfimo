@@ -14,7 +14,8 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav me-auto mt-2 mt-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="{{route('earrings.index')}}" aria-current="page">Home <span
+                        <a class="nav-link {{Route::currentRouteName() === 'earrings.index' ? 'active' : ''}}"
+                            href="{{route('earrings.index')}}" aria-current="page">Home <span
                                 class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -28,7 +29,7 @@
                             <a class="dropdown-item" href="#">Rings</a>
                             <a class="dropdown-item" href="#">Necklaces</a>
                             <a class="dropdown-item" href="#">Bracelets</a>
-                            <a class="dropdown-item" href="#">Gagetts</a>
+                            <a class="dropdown-item" href="#">Gadgets</a>
                         </div>
                     </li>
                 </ul>
