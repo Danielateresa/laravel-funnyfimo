@@ -1,7 +1,9 @@
 <header>
-    <div class="bg_header">
-
+    <div class="bg_header py-3 px-5 d-flex">
+        <a class="text_pink fw-bold ms-auto pe-4">Log in</a>
+        <a class="text_pink fw-bold">Sign up</a>
     </div>
+    <!-- bg_header-->
 
     <nav class="navbar navbar-expand-sm bg-white bg-light">
         <div class="container">
@@ -37,14 +39,18 @@
                             <a class="dropdown-item" href="#">Gadgets</a>
                         </div>
                     </li>
+                    <!-- dropdown -->
                 </ul>
+                <!-- nav links -->
                 <form class="d-flex my-2 my-lg-0">
                     <input class="form-control me-sm-2" type="text" placeholder="Search">
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
+                <!-- searchbar -->
             </div>
         </div>
     </nav>
+    <!-- nav -->
 
 
 </header>

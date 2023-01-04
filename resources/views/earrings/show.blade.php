@@ -12,12 +12,13 @@
         <h4>Price: <span class="text_pink fw-bold fs-3">{{$earring->price}} €</span></h4>
         <h4>Description: <span>{{$earring->description}}</span></h4>
     </div>
+    <!-- detail_text -->
 
     <div class="card_actions d-flex">
         <a class="btn buy_now me-3 my-4 fw-bold" href="#">Buy now!</a>
         <a class="ms-auto me-5 mt-4 back " href="{{route('shop')}}">
             <- Back</a>
-
     </div>
+    <!-- card_actions -->
 </div>
 @endsection

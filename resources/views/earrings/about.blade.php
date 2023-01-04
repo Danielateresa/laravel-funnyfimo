@@ -9,6 +9,7 @@
             <div class="col-3">
                 <img class="avatar" src="{{Vite::asset('resources/img/ai.jpg')}}" alt="avatar">
             </div>
+            <!-- col-3 avatar-->
             <div class="col-8">
                 <h4>La Creativa Digitale</h4>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas repellat fuga doloremque nihil,
@@ -26,6 +27,7 @@
 
                 <span class="signature">Daniela</span>
             </div>
+            <!-- col-8 text -->
         </div>
     </div>
 

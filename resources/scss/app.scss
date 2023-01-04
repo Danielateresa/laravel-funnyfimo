@@ -19,6 +19,14 @@ header {
     .active {
         color: rgb(85, 85, 85);
     }
+
+    a {
+        height: fit-content;
+
+        &:hover {
+            color: rgb(85, 85, 85);
+        }
+    }
 }
 
 main {
@@ -91,9 +99,7 @@ main {
         }
     }
 
-    .text_pink {
-        color: #f68c89;
-    }
+
 
     .back {
         text-decoration: underline;
@@ -161,4 +167,8 @@ footer {
         }
     }
 
+}
+
+.text_pink {
+    color: #f68c89;
 }
