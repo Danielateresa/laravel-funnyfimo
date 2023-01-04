@@ -21,18 +21,15 @@
                                 class="visually-hidden">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {{Route::currentRouteName() === 'shop' ? 'active' : ''}}"
-                            href="{{route('shop')}}">Shop</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link {{Route::currentRouteName() === 'about' ? 'active' : ''}}"
                             href="{{route('about')}}">About me</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">Creations</a>
+                        <a class="nav-link dropdown-toggle {{Route::currentRouteName() === 'earringsDB' ? 'active' : ''}}"
+                            href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">Creations DB</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Earrings</a>
+                            <a class="dropdown-item" href="{{route('earringsDB')}}">Earrings</a>
                             <a class="dropdown-item" href="#">Rings</a>
                             <a class="dropdown-item" href="#">Necklaces</a>
                             <a class="dropdown-item" href="#">Bracelets</a>

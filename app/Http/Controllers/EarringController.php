@@ -24,10 +24,10 @@ class EarringController extends Controller
         return view('earrings.about');
     }
 
-    public function shop()
+    public function earringsDB()
     {
         $earrings = Earring::all();
-        return view('earrings.shop', compact('earrings'));
+        return view('earrings.earringsDB', compact('earrings'));
     }
 
     /**

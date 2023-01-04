@@ -2,55 +2,37 @@
 
 @section('content')
 <div class="container py-5">
-    <h1 class="text-center">Earrings database</h1>
+    <h1 class="text-center pb-5">Welcome to FunnyFimo Shop!</h1>
 
-    @if(session('message'))
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    <h3>Handmade earrings</h3>
+    <p>All earrings are completely handmade from hypoallergenic and durable materials.</p>
 
-        <strong>{{session('message')}}</strong>
+    <div class="row">
+        @forelse($earrings as $earring)
+        <div class="col-3 gy-5">
+            <div class="card border-0 h-100">
+                <img class="shop_img" src="{{$earring->img}}" alt="{{$earring->name}}">
+                <!-- card -->
+
+                <div class="card-body h-100 d-flex flex-column justify-content-end">
+                    <h4>{{$earring->name}}</h4> <span class="fw-bold fs-3">{{$earring->price}} €</span>
+
+                    <div class="card_actions d-flex py-3">
+                        <a class="btn btn-outline ms-auto me-2" href="{{route('earrings.show', $earring->id)}}">Show
+                            details</a>
+                        <a class="btn buy_now me-3" href="#">Buy now!</a>
+                    </div>
+                    <!-- card_actions -->
+                </div>
+                <!-- card_body -->
+            </div>
+        </div>
+        <!-- for loop column-->
+
+        @empty
+        <h3>Sorry, no earrings available in this section!</h3>
+        @endforelse
     </div>
-    @endif
-
-    <div class="d-flex justify-content-end pe-4">
-        <a class="btn btn_pink my-3" href=" {{route('earrings.create')}}">Add earring</a>
-    </div>
-    <div class="table-responsive">
-        <table class="table border-white">
-            <thead>
-                <tr>
-                    <th scope="col">name</th>
-                    <th scope="col">code</th>
-                    <th scope="col">price</th>
-                    <th scope="col">description</th>
-                    <th scope="col">image</th>
-                    <th scope="col">actions</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse($earrings as $earring)
-                <tr class="">
-                    <td scope="row">{{$earring->name}}</td>
-                    <td>{{$earring->code}}</td>
-                    <td>{{$earring->price}} €</td>
-                    <td>{{$earring->description}}</td>
-                    <td><img class="table_img" src="{{$earring->img}}" alt="{{$earring->name}}"></td>
-                    <td><a class="btn btn-light w-75 ms-3" href="{{route('earrings.show', $earring->id)}}">Show</a>
-                        <a class="btn btn_edit  w-75 ms-3 my-2" href="{{route('earrings.edit', $earring->id)}}">Edit</a>
-                        <form action="{{route('earrings.destroy', $earring->id)}}" method="post">
-                            @csrf
-                            @method('DELETE')
-                            <button class="btn btn_dark_pink  w-75 ms-3" type="submit">Delete</button>
-                        </form>
-                    </td>
-                </tr>
-                @empty
-                <h3>Sorry, no earrings on database yet!</h3>
-                @endforelse
-            </tbody>
-        </table>
-    </div>
-
 
 </div>
 @endsection
