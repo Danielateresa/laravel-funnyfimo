@@ -56,7 +56,7 @@ class EarringController extends Controller
             'img'=>$request['img']
         ];
         Earring::create($data);
-        return to_route('index')->with('message', "New product $earrings->name added on database");
+        return to_route('earringsDB')->with('message', "New product $earrings->name added on database");
     }
 
     /**
@@ -98,7 +98,7 @@ class EarringController extends Controller
             'img'=>$request['img']
         ];
         $earring->update($data);
-        return to_route('index')->with('message', "Product $earring->name modified");
+        return to_route('earringsDB')->with('message', "Product $earring->name modified");
     }
 
     /**
@@ -110,6 +110,6 @@ class EarringController extends Controller
     public function destroy(Earring $earring)
     {
         $earring->delete();
-        return to_route('index')->with('message', "Product $earring->name deleted");
+        return to_route('earringsDB')->with('message', "Product $earring->name deleted");
     }
 }

@@ -25,15 +25,20 @@
                             href="{{route('about')}}">About me</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {{Route::currentRouteName() === 'earringsDB' ? 'active' : ''}}"
+                        <a class="nav-link dropdown-toggle {{Route::currentRouteName() === 'earringsDB' || Route::currentRouteName() === 'ringsDB' ? 'active' : ''}}"
                             href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">Creations DB</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="{{route('earringsDB')}}">Earrings</a>
-                            <a class="dropdown-item" href="#">Rings</a>
-                            <a class="dropdown-item" href="#">Necklaces</a>
-                            <a class="dropdown-item" href="#">Bracelets</a>
-                            <a class="dropdown-item" href="#">Gadgets</a>
+                            <a class="dropdown-item {{Route::currentRouteName() === 'earringsDB' ? 'text_pink' : ''}}"
+                                href="{{route('earringsDB')}}">Earrings</a>
+                            <a class="dropdown-item {{Route::currentRouteName() === 'ringsDB' ? 'text_pink' : ''}}"
+                                href="{{route('ringsDB')}}">Rings</a>
+                            <a class="dropdown-item {{Route::currentRouteName() === 'necklacesDB' ? 'text_pink' : ''}}"
+                                href="#">Necklaces</a>
+                            <a class="dropdown-item {{Route::currentRouteName() === 'braceletsDB' ? 'text_pink' : ''}}"
+                                href="#">Bracelets</a>
+                            <a class="dropdown-item {{Route::currentRouteName() === 'gadgetsDB' ? 'text_pink' : ''}}"
+                                href="#">Gadgets</a>
                         </div>
                     </li>
                     <!-- dropdown -->

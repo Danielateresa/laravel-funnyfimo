@@ -2,8 +2,8 @@
 
 @section('content')
 <div class="container py-5">
-    <h2>Create a new earrings</h2>
-    <form action="{{route('earrings.store')}}" method="post">
+    <h2>Create a new ring</h2>
+    <form action="{{route('rings.store')}}" method="post">
         @csrf
         <div class="mb-3">
             <label for="name" class="form-label">Name</label>
@@ -21,6 +21,11 @@
                 placeholder="Product price here" aria-describedby="helpId">
         </div>
         <div class="mb-3">
+            <label for="price" class="form-label">Size</label>
+            <input type="text" step="0.01" name="price" id="price" class="form-control" placeholder="Product size here"
+                aria-describedby="helpId">
+        </div>
+        <div class="mb-3">
             <label for="description" class="form-label">Description</label>
             <input type="text" name="description" id="description" class="form-control"
                 placeholder="Product description here" aria-describedby="helpId">
@@ -31,7 +36,7 @@
                 aria-describedby="helpId">
         </div>
 
-        <button type="submit" class="btn btn-primary">Add earring</button>
+        <button type="submit" class="btn btn-primary">Add ring</button>
     </form>
 
 </div>
