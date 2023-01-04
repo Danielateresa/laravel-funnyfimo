@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Earring;
+use App\Models\Ring;
 use App\Http\Requests\StoreEarringRequest;
 use App\Http\Requests\UpdateEarringRequest;
 
@@ -16,7 +17,8 @@ class EarringController extends Controller
     public function index()
     {
         $earrings = Earring::all();
-        return view('earrings.index', compact('earrings'));
+        $rings = Ring::all();
+        return view('earrings.index', compact('earrings', 'rings'));
     }
 
     public function about()

@@ -13,11 +13,7 @@ class RingController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $rings = Ring::all();
-        return view('earrings.index', compact('rings'));
-    }
+
 
     public function ringsDB()
     {
