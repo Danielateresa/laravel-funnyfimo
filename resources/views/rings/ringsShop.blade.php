@@ -23,6 +23,7 @@ Rings Shop
         </div>
     </div>
 </div>
+<!-- earrings_jumbotron -->
 
 <div class="container py-5">
 
