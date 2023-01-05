@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
+@section('title')
+Edit earring
+@endsection
+
 @section('content')
-<div class="container">
-    <h2>Create a new earrings</h2>
+<div class="container py-5">
+    <h2>Edit earring</h2>
     <form action="{{route('earrings.update', $earring->id)}}" method="post">
         @csrf
         @method('PUT')

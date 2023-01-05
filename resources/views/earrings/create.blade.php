@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@extends('layouts.app')
+
+@section('title')
+Add earring
+@endsection
+
 @section('content')
 <div class="container py-5">
     <h2>Create a new earrings</h2>

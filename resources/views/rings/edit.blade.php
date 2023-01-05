@@ -1,8 +1,12 @@
 @extends('layouts.app')
 
+@section('title')
+Edit ring DB
+@endsection
+
 @section('content')
-<div class="container">
-    <h2>Create a new ring</h2>
+<div class="container py-5">
+    <h2>Edit ring</h2>
     <form action="{{route('rings.update', $ring->id)}}" method="post">
         @csrf
         @method('PUT')

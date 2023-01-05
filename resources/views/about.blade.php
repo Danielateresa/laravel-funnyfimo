@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+About me
+@endsection
+
 @section('content')
 <div class="container py-5">
     <h1 class="text-center">About me</h1>

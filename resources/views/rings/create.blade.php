@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Add ring DB
+@endsection
+
 @section('content')
 <div class="container py-5">
     <h2>Create a new ring</h2>

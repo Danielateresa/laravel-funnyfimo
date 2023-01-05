@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Show ring
+@endsection
+
 @section('content')
 <div class="container py-5">
     <h2 class="pb-3">Ring detail - <span class="text_pink">{{$ring->name}}</span></h2>

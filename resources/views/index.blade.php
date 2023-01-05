@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('title')
+Welcome
+@endsection
+
 @section('content')
 <div class="container py-5">
     <h1 class="text-center pb-3 mt-2">Welcome to FunnyFimo Shop!</h1>

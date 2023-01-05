@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EarringController;
 use App\Http\Controllers\RingController;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
