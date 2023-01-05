@@ -18,7 +18,7 @@ class RingController extends Controller
     public function ringsDB()
     {
         $rings = Ring::all();
-        return view('earrings.ringsDB', compact('rings'));
+        return view('rings.ringsDB', compact('rings'));
     }
     /**
      * Show the form for creating a new resource.

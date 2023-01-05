@@ -15,7 +15,7 @@ use App\Http\Controllers\RingController;
 |
 */
 
-Route::get('/', [EarringController::class,'index'])->name('index');
+Route::get('/', [Controller::class,'index'])->name('index');
 Route::get('/about', [EarringController::class,'about'])->name('about');
 Route::get('/earringsDB', [EarringController::class,'earringsDB'])->name('earringsDB');
 Route::get('/ringsDB', [RingController::class,'ringsDB'])->name('ringsDB');

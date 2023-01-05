@@ -24,7 +24,7 @@
                             href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
                             aria-expanded="false">Shop</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <span class="dropdown-item text-uppercase">Categories</span>
+                            <span class="ps-3 text-uppercase">Categories</span>
                             <a class="dropdown-item {{Route::currentRouteName() === 'earringsDB' ? 'text_pink' : ''}}"
                                 href="{{route('earringsDB')}}">Earrings</a>
                             <a class="dropdown-item {{Route::currentRouteName() === 'ringsDB' ? 'text_pink' : ''}}"

@@ -14,17 +14,7 @@ class EarringController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $earrings = Earring::all();
-        $rings = Ring::all();
-        return view('earrings.index', compact('earrings', 'rings'));
-    }
 
-    public function about()
-    {
-        return view('earrings.about');
-    }
 
     public function earringsDB()
     {
