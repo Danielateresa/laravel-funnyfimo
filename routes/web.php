@@ -19,6 +19,8 @@ Route::get('/', [Controller::class,'index'])->name('index');
 Route::get('/about', [EarringController::class,'about'])->name('about');
 Route::get('/earringsDB', [EarringController::class,'earringsDB'])->name('earringsDB');
 Route::get('/ringsDB', [RingController::class,'ringsDB'])->name('ringsDB');
+Route::get('/earringsShop', [EarringController::class,'earringsShop'])->name('earringsShop');
+Route::get('/ringsShop', [RingController::class,'ringsShop'])->name('ringsShop');
 
 Route::resource('earrings', EarringController::class);
 Route::resource('rings', RingController::class);

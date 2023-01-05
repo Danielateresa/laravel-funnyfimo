@@ -2,6 +2,7 @@
 
 header {
     .bg_header {
+
         background-image: url(../img/headerfunnyfimowp.png);
         background-repeat: no-repeat;
         background-size: cover;
@@ -30,6 +31,17 @@ header {
 }
 
 main {
+    h1 {
+        font-size: 50px;
+        font-weight: 400;
+    }
+
+    h2 {
+        font-size: 40px;
+        font-weight: 400;
+    }
+
+
     .btn_pink {
         background-color: #f68c89;
         color: white;
@@ -142,6 +154,24 @@ main {
 
     .shop_img {
         width: 100%;
+    }
+
+    .earrings_jumbotron {
+
+        background-image: url(../img/praline.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom right;
+        height: 800px;
+
+        .col-4 {
+            background-image: linear-gradient(to right, #9e716fb9, #9e716f00);
+            color: white;
+        }
+
+        span {
+            font-size: 80px;
+        }
     }
 }
 

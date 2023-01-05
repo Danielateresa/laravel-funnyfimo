@@ -22,6 +22,12 @@ class EarringController extends Controller
         return view('earrings.earringsDB', compact('earrings'));
     }
 
+    public function earringsShop()
+    {
+        $earrings = Earring::all();
+        return view('earrings.earringsShop', compact('earrings'));
+    }
+
     /**
      * Show the form for creating a new resource.
      *

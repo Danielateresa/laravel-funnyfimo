@@ -133,7 +133,7 @@ return [
             "code" => 550,
             "price" => 7.00,
             "description" => "Baci Pendant Earrings, nichel free, handmade",
-            "img" => "http://funnyfimo.altervista.org/orecchini/bacivite.jpg",
+            "img" => "http://funnyfimo.altervista.org/orecchini/orecchini%20baci%20piccoli.jpg",
         ],
         [
             "name" => "French Macaron Pendant Earrings",
