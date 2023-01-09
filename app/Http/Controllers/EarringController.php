@@ -46,14 +46,9 @@ class EarringController extends Controller
      */
     public function store(StoreEarringRequest $request, Earring $earrings)
     {
-        $data = [
-            'name'=>$request['name'],
-            'code'=>$request['code'],
-            'price'=>$request['price'],
-            'description'=>$request['description'],
-            'img'=>$request['img']
-        ];
-        Earring::create($data);
+        $validated_data = $request->validated();
+        $earring = Earring::create($validated_data);
+
         return to_route('earringsDB')->with('message', "New product $earrings->name added on database");
     }
 
@@ -88,14 +83,9 @@ class EarringController extends Controller
      */
     public function update(UpdateEarringRequest $request, Earring $earring)
     {
-        $data = [
-            'name'=>$request['name'],
-            'code'=>$request['code'],
-            'price'=>$request['price'],
-            'description'=>$request['description'],
-            'img'=>$request['img']
-        ];
-        $earring->update($data);
+        $validated_data = $request->validated();
+        $earring->update($validated_data);
+
         return to_route('earringsDB')->with('message', "Product $earring->name modified");
     }
 

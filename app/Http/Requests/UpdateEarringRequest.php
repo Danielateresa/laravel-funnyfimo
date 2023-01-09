@@ -24,7 +24,11 @@ class UpdateEarringRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+                'name'=>'required|max:100',
+                'code'=>'nullable',
+                'price'=>'nullable|decimal:2',
+                'description'=>'nullable',
+                'img'=>'nullable'
         ];
     }
 }

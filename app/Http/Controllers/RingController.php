@@ -46,15 +46,9 @@ class RingController extends Controller
      */
     public function store(StoreRingRequest $request, Ring $ring)
     {
-        $data = [
-            'name'=>$request['name'],
-            'code'=>$request['code'],
-            'price'=>$request['price'],
-            'size'=>$request['size'],
-            'description'=>$request['description'],
-            'img'=>$request['img']
-        ];
-        Ring::create($data);
+        $validated_data = $request->validated();
+        $ring = Ring::create($validated_data);
+
         return to_route('ringsDB')->with('message', "New product $ring->name added on database");
     }
 
@@ -89,15 +83,9 @@ class RingController extends Controller
      */
     public function update(UpdateRingRequest $request, Ring $ring)
     {
-        $data = [
-            'name'=>$request['name'],
-            'code'=>$request['code'],
-            'price'=>$request['price'],
-            'size'=>$request['size'],
-            'description'=>$request['description'],
-            'img'=>$request['img']
-        ];
-        $ring->update($data);
+        $validated_data = $request->validated();
+
+        $ring->update($validated_data);
         return to_route('ringsDB')->with('message', "Product $ring->name modified");
     }
 
